@@ -1,0 +1,1 @@
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.animate([{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],{duration:550,easing:'ease-out',fill:'both'});observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.project,.case-block,.about-grid').forEach(el=>observer.observe(el));
